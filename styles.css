@@ -1,0 +1,197 @@
+body {
+    margin: 1rem auto;
+    padding: 3rem;
+    font-family: 'Comic Sans MS', sans-serif;
+    background: linear-gradient(to right, #ff5f6d, #ffc371);
+    color: #fff;
+}
+
+header {
+    width: 70%;
+    margin: 1em auto;
+    text-align: center;
+    color: #ffd700;
+    text-shadow: 2px 2px 4px #000;
+}
+
+main {
+    max-width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+#image-frame {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    text-align: center;
+    margin: 1rem auto;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    color: #ffd700;
+    text-shadow: 1px 1px 3px #000;
+}
+
+#score {
+    width: 30%;
+    padding: 1rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    color: #ffd700;
+    text-shadow: 1px 1px 3px #000;
+    margin: 0 auto 1rem;
+}
+
+#options {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+img {
+    width: 50%;
+    height: 50%;
+
+}
+
+button {
+    padding: 0.5rem 1rem;
+    font-size: medium;
+    border-radius: 20px;
+    border: none;
+    background-color: #ff4500;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+    background-color: #ff6347;
+    transform: scale(1.1);
+}
+
+.correct {
+    background-color: lightgreen !important;
+    animation: correctAnimation 1s ease-in-out;
+}
+
+.incorrect {
+    background-color: lightpink !important;
+    animation: incorrectAnimation 1s ease-in-out;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fade {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInGrow {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes correctAnimation {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes incorrectAnimation {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0.8);
+    }
+}
+
+@keyframes fadeInGrow {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+.fadeInGrow {
+    animation: fadeInGrow 1s ease-in-out;
+}
+
+.fadeInOut {
+    animation: fadeInOut 2s ease-in-out;
+}
